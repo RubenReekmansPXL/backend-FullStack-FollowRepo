@@ -18,16 +18,16 @@ spring:
           predicates:
             - Path=/employee/**
           filters:
-            - RewritePath=/employee/(?.*), /$\{path}
+            - RewritePath=/employee/(?<path>.*), /$\{path}
         - id: department-service
           uri: lb://department-service
           predicates:
             - Path=/department/**
           filters:
-            - RewritePath=/department/(?.*), /$\{path}
+            - RewritePath=/department/(?<path>.*), /$\{path}
         - id: organization-service
           uri: lb://organization-service
           predicates:
             - Path=/organization/**
           filters:
-            - RewritePath=/organization/(?.*), /$\{path}
+            - RewritePath=/organization/(?<path>.*), /$\{path}
