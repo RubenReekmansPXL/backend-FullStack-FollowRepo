@@ -20,9 +20,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class OrganizationApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OrganizationApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(OrganizationApplication.class, args);
+    }
+
 
 	@Bean
 	public Docket swaggerApi() {
@@ -34,12 +35,11 @@ public class OrganizationApplication {
 				.apiInfo(new ApiInfoBuilder().version("1.0").title("Organization API").description("Documentation Organization API v1.0").build());
 	}
 
-	@Bean
-	OrganizationRepository repository() {
-		OrganizationRepository repository = new OrganizationRepository();
-		repository.add(new Organization("Microsoft", "Redmond, Washington, USA"));
-		repository.add(new Organization("Oracle", "Redwood City, California, USA"));
-		return repository;
-	}
-	
+    @Bean
+    OrganizationRepository repository() {
+        OrganizationRepository repository = new OrganizationRepository();
+        repository.add(new Organization("Microsoft", "Redmond, Washington, USA"));
+        repository.add(new Organization("Oracle", "Redwood City, California, USA"));
+        return repository;
+    }
 }

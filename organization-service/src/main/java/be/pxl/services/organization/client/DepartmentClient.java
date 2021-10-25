@@ -1,6 +1,5 @@
 package be.pxl.services.organization.client;
 
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,4 +15,3 @@ public interface DepartmentClient {
     @GetMapping("/organization/{organizationId}/with-employees")
     public List findByOrganizationWithEmployees(@PathVariable("organizationId") Long organizationId);
 }
-

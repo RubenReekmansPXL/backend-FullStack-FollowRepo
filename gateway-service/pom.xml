@@ -15,7 +15,6 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
@@ -38,11 +37,11 @@
             <artifactId>springdoc-openapi-webflux-ui</artifactId>
             <version>1.2.31</version>
         </dependency>
-		<!--<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.8.0</version>
-		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger2</artifactId>-->
+<!--			<version>2.8.0</version>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<dependencyManagement>

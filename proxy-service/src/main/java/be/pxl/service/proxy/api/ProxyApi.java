@@ -12,7 +12,6 @@ import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Configuration
 public class ProxyApi {
 
@@ -23,7 +22,7 @@ public class ProxyApi {
 	@Bean
 	public SwaggerResourcesProvider swaggerResourcesProvider() {
 		return () -> {
-			List resources = new ArrayList();
+			List<SwaggerResource> resources = new ArrayList<>();
 			properties.getRoutes().values().stream()
 					.forEach(route -> resources.add(createResource(route.getServiceId(), route.getId(), "2.0")));
 			return resources;
@@ -38,4 +37,3 @@ public class ProxyApi {
 		return swaggerResource;
 	}
 }
-

@@ -13,3 +13,4 @@ public interface EmployeeClient {
     @GetMapping("/organization/{organizationId}")
     List findByOrganization(@PathVariable("organizationId") Long organizationId);
 }
+
